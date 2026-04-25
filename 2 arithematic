@@ -1,0 +1,50 @@
+Aim
+
+To perform arithmetic operations using 8051.
+
+Theory
+Arithmetic operations are performed using ALU
+Accumulator stores result
+Instructions: ADD, SUBB, MUL, DIV
+Carry flag indicates overflow
+MUL stores result in A and B
+DIV gives quotient and remainder
+Used in embedded systems
+Simulator Used
+
+EdSim51
+
+Code
+ORG 0000H
+
+; ADD
+MOV A, #25H
+MOV R0, #12H
+ADD A, R0
+
+; SUB
+MOV A, #50H
+MOV R1, #20H
+SUBB A, R1
+
+; MUL
+MOV A, #12H
+MOV B, #05H
+MUL AB
+
+; DIV
+MOV A, #40H
+MOV B, #08H
+DIV AB
+
+SJMP $
+END
+Observation
+ADD → A = 37H
+SUB → A = 30H
+MUL → A = 3CH, B = 00H
+DIV → A = 08H, B = 00H
+All operations correct
+Conclusion
+
+Thus, arithmetic operations were successfully implemented and verified.
