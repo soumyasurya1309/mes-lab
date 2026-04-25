@@ -1,0 +1,39 @@
+Aim
+
+To transfer data from one memory block to another.
+
+Theory
+MOV instruction transfers data
+Indirect addressing uses R0/R1
+Registers act as pointers
+DJNZ used for looping
+Efficient for block transfer
+Used in memory operations
+Fast execution
+Simulator Used
+
+EdSim51
+
+Code
+ORG 0000H
+MOV R0, #30H
+MOV R1, #40H
+MOV R2, #10
+
+BACK:
+MOV A, @R0
+MOV @R1, A
+INC R0
+INC R1
+DJNZ R2, BACK
+
+SJMP $
+END
+Observation
+Data copied from 30H–3FH to 40H–4FH
+Loop executed 16 times
+No data loss
+Correct transfer verified
+Conclusion
+
+Thus, block data transfer was successfully implemented.
