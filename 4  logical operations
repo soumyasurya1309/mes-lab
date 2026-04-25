@@ -1,0 +1,47 @@
+Aim
+
+To perform logical operations using 8051.
+
+Theory
+Logical instructions operate on bits
+AND masks bits
+OR sets bits
+XOR toggles bits
+CPL complements data
+RL and RR rotate bits
+Used in control systems
+Simulator Used
+
+EdSim51
+
+Code
+ORG 0000H
+
+; AND
+MOV A, #0F5H
+MOV R0, #0A3H
+ANL A, R0
+
+; OR
+MOV A, #55H
+MOV R1, #0AAH
+ORL A, R1
+
+; XOR
+MOV A, #5AH
+MOV R2, #3CH
+XRL A, R2
+
+; CPL
+MOV A, #96H
+CPL A
+
+SJMP $
+END
+Observation
+AND, OR, XOR executed correctly
+CPL complemented bits
+Results verified in A
+Conclusion
+
+Thus, logical operations were successfully verified.
