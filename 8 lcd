@@ -1,0 +1,29 @@
+Aim
+
+To interface LCD and display characters.
+
+Theory
+LCD displays characters
+RS selects command/data
+RW selects read/write
+EN enables operation
+Data sent via port
+Requires initialization
+Used in display systems
+Simulator Used
+
+EdSim51
+
+Code
+ORG 0000H
+MOV A, #'A'
+MOV P2, A
+SJMP $
+END
+Observation
+Character ‘A’ displayed
+LCD responded correctly
+Output verified
+Conclusion
+
+Thus, LCD interfacing and display operation were successful.
