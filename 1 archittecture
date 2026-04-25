@@ -1,0 +1,33 @@
+✅ EXPERIMENT 1 – Familiarization
+Aim
+
+To study the architecture and programming of 8051 microcontroller using simulator.
+
+Theory
+8051 is an 8-bit microcontroller used in embedded systems
+It has CPU, 128B RAM, 4KB ROM, timers, and I/O ports
+It provides 4 ports (P0–P3) with 32 I/O pins
+Supports interrupts and serial communication
+Executes instructions stored in memory
+Works on clock signal
+EdSim51 is used for simulation
+Simulator Used
+
+EdSim51
+
+Code
+ORG 0000H
+MOV A, #25H
+MOV R0, #10H
+ADD A, R0
+HERE: SJMP HERE
+END
+Observation
+A loaded with 25H, R0 with 10H
+ADD executed successfully
+Result A = 35H
+Infinite loop observed
+Registers updated correctly
+Conclusion
+
+Thus, 8051 architecture and program execution were successfully verified.
