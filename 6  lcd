@@ -1,0 +1,37 @@
+Aim
+
+To interface LEDs and generate patterns.
+
+Theory
+LEDs connected to port pins
+HIGH/LOW controls LED
+Patterns generated using loops
+Delay required
+Used in indicators
+Simple interfacing
+Widely used
+Simulator Used
+
+EdSim51
+
+Code
+ORG 0000H
+AGAIN:
+MOV P1, #0AAH
+ACALL DELAY
+MOV P1, #055H
+ACALL DELAY
+SJMP AGAIN
+
+DELAY:
+MOV R2, #200
+HERE: DJNZ R2, HERE
+RET
+END
+Observation
+LED pattern blinking observed
+Alternate ON/OFF pattern seen
+Loop working continuously
+Conclusion
+
+Thus, LED interfacing and pattern generation were successful.
