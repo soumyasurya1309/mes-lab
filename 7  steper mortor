@@ -1,0 +1,64 @@
+Aim
+
+To interface stepper motor and control its direction.
+
+Theory
+Stepper motor rotates in steps
+Direction depends on sequence
+CW uses forward sequence
+ACW uses reverse sequence
+Delay controls speed
+Used in robotics
+Provides precise control
+Simulator Used
+
+EdSim51
+
+🔹 Code – Clockwise (CW)
+ORG 0000H
+CW:
+MOV P1, #08H
+ACALL DELAY
+MOV P1, #04H
+ACALL DELAY
+MOV P1, #02H
+ACALL DELAY
+MOV P1, #01H
+ACALL DELAY
+SJMP CW
+
+DELAY:
+MOV R6, #255
+D1: MOV R7, #255
+D2: DJNZ R7, D2
+DJNZ R6, D1
+RET
+END
+🔹 Code – Anticlockwise (ACW)
+ORG 0000H
+ACW:
+MOV P1, #01H
+ACALL DELAY
+MOV P1, #02H
+ACALL DELAY
+MOV P1, #04H
+ACALL DELAY
+MOV P1, #08H
+ACALL DELAY
+SJMP ACW
+
+DELAY:
+MOV R6, #255
+D1: MOV R7, #255
+D2: DJNZ R7, D2
+DJNZ R6, D1
+RET
+END
+Observation
+CW rotation observed using forward sequence
+ACW rotation observed using reverse sequence
+Speed controlled by delay
+Smooth step movement
+Conclusion
+
+Thus, stepper motor direction control (CW and ACW) was successfully implemented.
